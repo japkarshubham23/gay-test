@@ -1,12 +1,34 @@
+"use client";
+
 import gayTest from "@/app/images/gay-test-banner.png"
 import TickIcon from "@/app/icons/TickIcon";
 import StartIcon from "@/app/icons/StartIcon";
 import TimerIcon from "@/app/icons/TimerIcon";
 import FaceScanIcon from "@/app/icons/FaceScanIcon";
 import PersonalizeIcon from "@/app/icons/PersonalizeIcon";
+import { useState } from "react";
 
 
 export default function HeroSection() {
+    const [btnStyle, setBtnStyle] = useState({
+        color: "black",
+        background: "white",
+    });
+
+    const handleMouseEnter = () => {
+        setBtnStyle({
+            color: "#FFFFFF",
+            background: "linear-gradient(90deg, #3550E6 5.25%, #9F39E3 18.54%, #F439B2 34.32%, #EB4934 48.44%, #E87D2E 59.24%, #F2B62B 69.21%, #F3DC38 79.59%, #C4F353 91.64%)"
+        });
+    };
+
+    const handleMouseLeave = () => {
+        setBtnStyle({
+            color: "black",
+            background: "white"
+        })
+    };
+
     return <div style={{
         backgroundImage: `url(${gayTest.src})`,
         backgroundRepeat: 'no-repeat',
@@ -50,8 +72,11 @@ export default function HeroSection() {
 
                         <div className={"py-4.5 md:py-8 px-2.5 w-full"}>
                             <button
-                                className={"rounded-[10px] text-black w-full bg-white py-3.5 md:py-[18px] text-xl font-medium"}>Take
-                                the quiz
+                                style={btnStyle}
+                                className={`rounded-[10px] w-full bg-white py-3.5 md:py-[18px] text-xl font-medium transition duration-300`}
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}>
+                                Take the quiz
                             </button>
                         </div>
                     </div>

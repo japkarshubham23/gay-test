@@ -5,7 +5,7 @@ import Faq from "@/app/components/Faq";
 export default function Home() {
     return (
         <div className={"font-sans"}>
-            <header className={"flex justify-center pt-[50px] pb-[30px]"}>
+            <header className={"flex justify-center pt-[24px] md:pt-[50px] pb-[30px]"}>
                 <Logo />
             </header>
 
