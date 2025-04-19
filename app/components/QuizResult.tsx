@@ -56,7 +56,70 @@ function ProgressBar() {
         </div>
     </div>
 }
-export default function QuizResult() {
+
+function TestReport() {
+    const {quiz} = useTestReport();
+
+    const [percentage, setPercentage] = useState(0);
+    const testReport = quiz.reduce((total, e: ITestReport) => {
+        const impact = e?.options?.[e.selectedIndex]?.impact;
+        return e.selectedIndex !== -1 && impact ? total + impact : total;
+    }, 0);
+
+    useEffect(() => {
+        if (!testReport) {
+            return
+        }
+
+        let current = 0;
+
+        const stepUp = () => {
+            if (current < 100) {
+                current += 2;
+                setPercentage(current);
+                setTimeout(stepUp, 40); // speed of step up
+            } else {
+                setTimeout(() => stepDown(), 500); // pause at 100%
+            }
+        };
+
+        const stepDown = () => {
+            if (current > testReport) {
+                current -= 2;
+                setPercentage(current);
+                setTimeout(stepDown, 50); // slightly slower down for smoothness
+            } else {
+                setPercentage(testReport);
+            }
+        };
+
+        stepUp();
+    }, [testReport]);
+
+    return (
+        <div className="flex flex-col items-center justify-center bg-black text-white pt-24">
+            <div className="text-[36px] md:text-[46px] leading-8 md:leading-10 font-medium">
+                You’re
+            </div>
+            <div
+                style={{
+                    background:
+                        "linear-gradient(90deg, #3550E6 5.25%, #9F39E3 18.54%, #F439B2 34.32%, #EB4934 48.44%, #E87D2E 59.24%, #F2B62B 69.21%, #F3DC38 79.59%, #C4F353 91.64%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                }}
+                className="text-[110px] md:text-[146px] font-extrabold transition-all duration-200"
+            >
+                {percentage}%
+            </div>
+            <div className="text-[36px] md:text-[46px] leading-8 md:leading-10 font-medium">
+                Chances of GAY
+            </div>
+        </div>
+    );
+}
+
+function TestQuiz() {
     const {quiz, answer, activeQuizIndex, setActiveQuizIndex} = useTestReport();
     const activeQuiz = quiz.find((e: ITestReport) => e.index === activeQuizIndex)
     const [buttonAction, setButtonAction] = useState({
@@ -98,54 +161,62 @@ export default function QuizResult() {
         )
     }, [activeQuiz]);
 
-    return <div className={"min-h-[calc(100dvh_-_6px)] px-4"}>
-        <header className={"flex justify-center pt-[24px] md:pt-[50px] pb-[56px]"}>
-            <Logo />
-        </header>
+    return <div className={"max-w-[850px] w-full mx-auto"}>
+        {/**/}
+        <ProgressBar />
 
-        <div className={"max-w-[850px] w-full m-auto"}>
-            {/**/}
-            <ProgressBar />
-
-            <div>
-                <div className={"flex pb-[46px]"}>
-                    <div onClick={() => {
-                        setActiveQuizIndex(activeQuizIndex - 1)
-                    }} className={`w-4.5 transition-all duration-500 ease-in-out pt-0.5 md:pt-1 ${(activeQuiz?.index !== 1) ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}`}>
-                        <ArrowIcon/>
-                    </div>
-                    <div
-                        className={"text-center text-lg md:text-[26px] font-medium leading-7 md:leading-10 flex-1"}>{activeQuiz?.question}</div>
+        <div>
+            <div className={"flex pb-[46px]"}>
+                <div onClick={() => {
+                    setActiveQuizIndex(activeQuizIndex - 1)
+                }} className={`w-4.5 transition-all duration-500 ease-in-out pt-0.5 md:pt-1 ${(activeQuiz?.index !== 1) ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}`}>
+                    <ArrowIcon/>
                 </div>
+                <div
+                    className={"text-center text-lg md:text-[26px] font-medium leading-7 md:leading-10 flex-1"}>{activeQuiz?.question}</div>
+            </div>
 
-                <ul className={"grid grid-cols-2 gap-[10px] md:gap-[50px]"}>
-                    {activeQuiz?.options.map((option: IOption, index: number) => {
-                        const isOtherOptionClicked = buttonAction.selected === index;
-                        const disableHover = (buttonAction.selected !== -1 && buttonAction.selected !== index)
+            <ul className={"grid grid-cols-2 gap-[10px] md:gap-[50px]"}>
+                {activeQuiz?.options.map((option: IOption, index: number) => {
+                    const isOtherOptionClicked = buttonAction.selected === index;
+                    const disableHover = (buttonAction.selected !== -1 && buttonAction.selected !== index)
 
-                        return <li key={index}
-                                   onClick={() => onSelectOption(index)}
-                                   onMouseEnter={() => setButtonAction(e=> ({...e, hover: index}))}
-                                   onMouseLeave={() => setButtonAction(e=> ({...e, hover: -1}))}
-                                   className={`border border-[#565656] rounded-xl p-[1px] cursor-pointer ${((buttonAction.hover === index || isOtherOptionClicked) && !disableHover) ? "border border-transparent bg-[linear-gradient(90deg,_#464CD0_0%,_#8038BD_13.46%,_#AC3495_29.81%,_#D7463F_44.23%,_#E48C2F_57.21%,_#D7B438_72.6%,_#CFB63A_85.58%,_#B6BD41_100%)] bg-origin-border bg-clip-padding" : ""}`}>
-                            <div className={"relative flex bg-black px-3 md:px-5 py-3 md:py-4 rounded-xl h-full"}>
-                                <div className={"flex flex-1 items-center pr-[22px] text-sm md:text-[22px]"}>
-                                    {option.answer}
-                                </div>
-                                <div
-                                    className={`
+                    return <li key={index}
+                               onClick={() => onSelectOption(index)}
+                               onMouseEnter={() => setButtonAction(e=> ({...e, hover: index}))}
+                               onMouseLeave={() => setButtonAction(e=> ({...e, hover: -1}))}
+                               className={`border border-[#565656] rounded-xl p-[1px] cursor-pointer ${((buttonAction.hover === index || isOtherOptionClicked) && !disableHover) ? "border border-transparent bg-[linear-gradient(90deg,_#464CD0_0%,_#8038BD_13.46%,_#AC3495_29.81%,_#D7463F_44.23%,_#E48C2F_57.21%,_#D7B438_72.6%,_#CFB63A_85.58%,_#B6BD41_100%)] bg-origin-border bg-clip-padding" : ""}`}>
+                        <div className={"relative flex bg-black px-3 md:px-5 py-3 md:py-4 rounded-xl h-full"}>
+                            <div className={"flex flex-1 items-center pr-[22px] text-sm md:text-[22px]"}>
+                                {option.answer}
+                            </div>
+                            <div
+                                className={`
                                             absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 
                                             transition-all duration-500 ease-in-out
                                             w-[20px] md:w-[22px]
                                             ${buttonAction.selected === index ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}
                                         `}>
-                                    <OptionSelectionIcon />
-                                </div>
+                                <OptionSelectionIcon />
                             </div>
-                        </li>
-                    })}
-                </ul>
-            </div>
+                        </div>
+                    </li>
+                })}
+            </ul>
         </div>
+    </div>
+}
+
+export default function QuizResult() {
+    const {quiz} = useTestReport();
+
+    const allAnswered = quiz.filter(e => e.selectedIndex !== -1).length === 10;
+
+    return <div className={"flex flex-col min-h-[calc(100dvh_-_6px)] px-4 md:px-0"}>
+        <header className={"flex justify-center pt-[24px] md:pt-[50px] pb-[56px]"}>
+            <Logo />
+        </header>
+
+        {allAnswered ? <TestReport /> : <TestQuiz />}
     </div>
 }
