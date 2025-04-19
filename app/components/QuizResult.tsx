@@ -61,10 +61,12 @@ function TestReport() {
     const {quiz} = useTestReport();
 
     const [percentage, setPercentage] = useState(0);
-    const testReport = quiz.reduce((total, e: ITestReport) => {
-        const impact = e?.options?.[e.selectedIndex]?.impact;
-        return e.selectedIndex !== -1 && impact ? total + impact : total;
+    const rawScore = quiz.reduce((total, e: ITestReport) => {
+        const impact = e?.options?.[e.selectedIndex]?.impact ?? 0;
+        return e.selectedIndex !== -1 ? total + impact : total;
     }, 0);
+
+    const testReport = Math.max(0, Math.min(100, rawScore));
 
     useEffect(() => {
         if (!testReport) {
