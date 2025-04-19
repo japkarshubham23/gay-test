@@ -27,26 +27,26 @@ function ProgressBar() {
         <div style={{
             width: `${progressInPx}px`,
             background: "linear-gradient(90deg, #3850D4 0%, #8636BB 15.38%, #B9358A 33.65%, #DC4936 50%, #E57B2D 62.5%, #E2AE34 74.04%, #CCBA3B 86.06%, #9DC147 100%)"
-        }} className={"absolute top-0 h-[5px] bg-[#FFFFFF33] w-1/2 rounded-[10px]"}></div>
+        }} className={"absolute top-0 h-[5px] bg-[#FFFFFF33] w-1/2 rounded-[10px] transition-all duration-700 ease-in-out"}></div>
         <div
             style={{
                 left: `${progressInPx - 8}px`,
             }}
-            className={"absolute h-[13px] top-[-3.5px] bg-[#9FC046] w-1 z-1 "}></div>
+            className={"absolute h-[13px] top-[-3.5px] bg-[#9FC046] w-1 z-1 transition-all duration-700 ease-in-out"}></div>
         <div style={{
             left: `${progressInPx - 4}px`,
-        }} className={"absolute h-[13px] top-[-3.5px] left-1 bg-black w-1 z-1"}></div>
+        }} className={"absolute h-[13px] top-[-3.5px] left-1 bg-black w-1 z-1 transition-all duration-700 ease-in-out"}></div>
 
         {/*full width black bar*/}
         <div className={"absolute top-0 h-[5px] bg-[#FFFFFF33] w-full rounded-[10px]"}></div>
 
         <div className={"flex items-center justify-between pt-2.5"}>
             {Array.from({ length: 11 }).map((_, i) => (
-                <div key={i}>
+                <div key={i} className={"transition-all duration-700 ease-in-out"}>
                     {i != 0 && ((products > i) ? <CompleteIcon /> : <span style={{
                         opacity: (products != i) ? 0.2 : 1,
                         fontSize: (products != i) ? "16px" : "20px"
-                    }} className={`font-medium`}>{`Q${i}`}</span>)}
+                    }} className={`font-medium transition-all duration-700 ease-in-out`}>{`Q${i}`}</span>)}
                 </div>
             ))}
         </div>
@@ -115,10 +115,14 @@ export default function QuizResult() {
                                 <div className={"flex-1 pr-[22px]"}>
                                     {option.answer}
                                 </div>
-                                {(buttonAction.selected === index) ? <div
-                                    className={"absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2"}>
-                                    <OptionSelectionIcon/>
-                                </div> : null}
+                                <div
+                                    className={`
+                                            absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 
+                                            transition-all duration-500 ease-in-out
+                                            ${buttonAction.selected === index ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}
+                                        `}>
+                                    <OptionSelectionIcon />
+                                </div>
                             </div>
                         </li>
                     })}
