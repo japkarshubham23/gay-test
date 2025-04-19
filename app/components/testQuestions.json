@@ -1,78 +1,111 @@
 [
   {
     "index": 1,
-    "question": "Have you ever felt a romantic or emotional attraction to someone of the same gender?",
+    "question": "Who are you attracted to?",
     "options": [
-      {"answer": "Yes, multiple times", "impact": 12},
-      {"answer": "Yes, once or twice", "impact": 8},
-      {"answer": "Not sure", "impact": 4},
-      {"answer": "Never", "impact": -5}
+      { "answer": "Men only 🌈",     "impact": 12 },
+      { "answer": "Women only",      "impact": 0  },
+      { "answer": "Both genders 😊", "impact": 8  },
+      { "answer": "Neither gender",  "impact": 0  }
     ],
-    "selectedIndex": -1
+    "selectedIndex" : -1
   },
   {
     "index": 2,
-    "question": "Do you feel more comfortable discussing personal topics with friends of the same gender?",
+    "question": "Which lips excite you?",
     "options": [
-      {"answer": "Always", "impact": 10},
-      {"answer": "Sometimes", "impact": 5},
-      {"answer": "Rarely", "impact": -3},
-      {"answer": "No, I prefer opposite-gender friends for this", "impact": -8}
+      { "answer": "Male lips 😏",   "impact": 12 },
+      { "answer": "Female lips",   "impact": 0  },
+      { "answer": "Both lips 😉",  "impact": 8  },
+      { "answer": "No kissing",    "impact": -5 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 3,
-    "question": "How do you react to same-gender romantic scenes in movies or TV shows?",
+    "question": "Favorite porn type?",
     "options": [
-      {"answer": "I feel deeply connected or inspired", "impact": 15},
-      {"answer": "I enjoy them casually", "impact": 7},
-      {"answer": "Neutral/no strong opinion", "impact": 0},
-      {"answer": "Uncomfortable or disinterested", "impact": -10}
+      { "answer": "Gay porn 🌈",     "impact": 12 },
+      { "answer": "Straight porn",   "impact": 0  },
+      { "answer": "Both types 😉",   "impact": 8  },
+      { "answer": "No interest",     "impact": 0  }
     ],
     "selectedIndex": -1
   },
   {
     "index": 4,
-    "question": "Have you ever questioned your sexual orientation?",
+    "question": "Who do you fantasize?",
     "options": [
-      {"answer": "Yes, frequently", "impact": 12},
-      {"answer": "Yes, occasionally", "impact": 8},
-      {"answer": "Maybe once or twice", "impact": 3},
-      {"answer": "No, never", "impact": -10}
+      { "answer": "Men only",     "impact": 12 },
+      { "answer": "Women only",   "impact": 0  },
+      { "answer": "Both 😊",       "impact": 8  },
+      { "answer": "No fantasy",   "impact": 0  }
     ],
     "selectedIndex": -1
   },
   {
     "index": 5,
-    "question": "Do you feel a sense of belonging in LGBTQ+ spaces or communities?",
+    "question": "Preferred date spot?",
     "options": [
-      {"answer": "Strongly agree", "impact": 15},
-      {"answer": "Somewhat agree", "impact": 9},
-      {"answer": "Neutral", "impact": 2},
-      {"answer": "Disagree", "impact": -12}
+      { "answer": "Gay bar 🌈",    "impact": 12 },
+      { "answer": "Café date",     "impact": 0  },
+      { "answer": "Dance club",    "impact": 5  },
+      { "answer": "Park picnic",   "impact": 0  }
     ],
     "selectedIndex": -1
   },
   {
     "index": 6,
-    "question": "How do you perceive your future relationships?",
+    "question": "Reaction to gay friends?",
     "options": [
-      {"answer": "Envision being with someone of the same gender", "impact": 20},
-      {"answer": "Open to any gender", "impact": 10},
-      {"answer": "Unsure", "impact": 5},
-      {"answer": "Only see myself with the opposite gender", "impact": -15}
+      { "answer": "Supportive 👍",    "impact": 8  },
+      { "answer": "Indifferent",      "impact": 0  },
+      { "answer": "Uncomfortable 😕", "impact": -5 },
+      { "answer": "No friends",      "impact": 0  }
     ],
     "selectedIndex": -1
   },
   {
     "index": 7,
-    "question": "How do you respond to someone assuming you're LGBTQ+?",
+    "question": "Think of men often?",
     "options": [
-      {"answer": "Proud or validated", "impact": 18},
-      {"answer": "Don’t mind either way", "impact": 5},
-      {"answer": "Annoyed but not offended", "impact": -5},
-      {"answer": "Strongly correct them", "impact": -12}
+      { "answer": "Often 🌈",     "impact": 12 },
+      { "answer": "Rarely",       "impact": 0  },
+      { "answer": "Sometimes 😊", "impact": 8  },
+      { "answer": "Never",        "impact": 0  }
+    ],
+    "selectedIndex": -1
+  },
+  {
+    "index": 8,
+    "question": "Which movie you prefer?",
+    "options": [
+      { "answer": "Brokeback Mountain 🌈", "impact": 12 },
+      { "answer": "Moonlight 🎬",           "impact": 8  },
+      { "answer": "Titanic",               "impact": 0  },
+      { "answer": "Star Wars",             "impact": 0  }
+    ],
+    "selectedIndex": -1
+  },
+  {
+    "index": 9,
+    "question": "How do you dress?",
+    "options": [
+      { "answer": "Masculine",         "impact": 0  },
+      { "answer": "Feminine 😊",       "impact": 8  },
+      { "answer": "Androgynous 🌈",    "impact": 12 },
+      { "answer": "Casual wear",       "impact": 0  }
+    ],
+    "selectedIndex": -1
+  },
+  {
+    "index": 10,
+    "question": "Ideal partner lead?",
+    "options": [
+      { "answer": "Male lead 😊",   "impact": 8  },
+      { "answer": "Female lead",    "impact": 0  },
+      { "answer": "Both leads",     "impact": 12 },
+      { "answer": "No preference",  "impact": 0  }
     ],
     "selectedIndex": -1
   }

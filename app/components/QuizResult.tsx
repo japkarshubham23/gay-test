@@ -8,12 +8,12 @@ import {IOption, ITestReport, useTestReport} from "@/app/components/providers/Te
 import OptionSelectionIcon from "@/app/icons/OptionSelectionIcon";
 
 function ProgressBar() {
-    const {quiz, answer} = useTestReport();
+    const {quiz} = useTestReport();
 
     const [widthElement, setWidthElement] = useState(0);
     const ref = useRef<HTMLDivElement>(null);
 
-    const products = quiz.filter(e=> e.selectedIndex !== -1).length
+    const products = (quiz.filter(e=> e.selectedIndex !== -1).length + 1);
     const progressInPx: number = ((widthElement / 10) * (products))
 
     useEffect(() => {
@@ -43,7 +43,9 @@ function ProgressBar() {
         <div className={"flex items-center justify-between pt-2.5"}>
             {Array.from({ length: 11 }).map((_, i) => (
                 <div key={i} className={"transition-all duration-700 ease-in-out"}>
-                    {i != 0 && ((products > i) ? <CompleteIcon /> : <span
+                    {i != 0 && ((products > i) ? <div className={"w-[20px] md:w-[30px]"}>
+                            <CompleteIcon />
+                        </div> : <span
                             className={`font-medium transition-all duration-700 ease-in-out 
                         ${products !== i ? 'opacity-20 text-sm md:text-base' : 'opacity-100 text-base md:text-xl'}`}>
                       {`Q${i}`}
@@ -81,7 +83,9 @@ export default function QuizResult() {
                 selectedIndex: index
             })
             btnActionDefault()
-            setActiveQuizIndex(activeQuiz.index + 1)
+
+            const lastActiveIndex = quiz.find((e: ITestReport) => e.selectedIndex === -1)
+            setActiveQuizIndex((lastActiveIndex?.index || 0) + (lastActiveIndex?.index === activeQuiz.index ? 1 : 0))
         }, 1000)
     }
 
@@ -107,7 +111,7 @@ export default function QuizResult() {
                 <div className={"flex pb-[46px]"}>
                     <div onClick={() => {
                         setActiveQuizIndex(activeQuizIndex - 1)
-                    }} className={`w-4 md:w-4.5 transition-all duration-500 ease-in-out pt-1 ${(activeQuiz?.index !== 1) ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}`}>
+                    }} className={`w-4.5 transition-all duration-500 ease-in-out pt-0.5 md:pt-1 ${(activeQuiz?.index !== 1) ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}`}>
                         <ArrowIcon/>
                     </div>
                     <div
