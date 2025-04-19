@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
+import type {NextConfig} from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    devIndicators: false,
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['var(--font-inter)', 'sans-serif'],
+            },
+        },
+    },
 };
 
 export default nextConfig;
