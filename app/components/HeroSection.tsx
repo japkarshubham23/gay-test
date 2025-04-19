@@ -8,9 +8,12 @@ import FaceScanIcon from "@/app/icons/FaceScanIcon";
 import PersonalizeIcon from "@/app/icons/PersonalizeIcon";
 import { useState } from "react";
 import Logo from "@/app/images/Logo";
+import { useRouter } from "next/navigation";
 
 
 export default function HeroSection() {
+    const router = useRouter();
+    const [navigationLoading, setNavigationLoading] = useState(false);
     const [btnStyle, setBtnStyle] = useState({
         color: "black",
         background: "white",
@@ -24,11 +27,20 @@ export default function HeroSection() {
     };
 
     const handleMouseLeave = () => {
-        setBtnStyle({
-            color: "black",
-            background: "white"
-        })
+        if (!navigationLoading) {
+            setBtnStyle({
+                color: "black",
+                background: "white"
+            })
+        }
     };
+
+    const handleNavigation = () => {
+        setNavigationLoading(true);
+        setTimeout(() => {
+            router.push('/quiz')
+        }, 1500)
+    }
 
     return <div style={{
         backgroundImage: `url(${gayTest.src})`,
@@ -76,11 +88,17 @@ export default function HeroSection() {
 
                         <div className={"py-4.5 md:py-8 px-2.5 w-full"}>
                             <button
+                                onClick={handleNavigation}
                                 style={btnStyle}
-                                className={`rounded-[10px] w-full bg-white py-3.5 md:py-[18px] text-xl font-medium transition duration-500 md:duration-300`}
+                                className={`rounded-[10px] w-full bg-white py-3.5 md:py-[18px] text-xl font-medium transition duration-500 md:duration-300 cursor-pointer`}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}>
-                                Take the quiz
+                                {navigationLoading ? <div className="flex justify-center items-center">
+                                    <span>Loading</span>
+                                    <span className="animate-bounce [animation-delay:0s]">.</span>
+                                    <span className="animate-bounce [animation-delay:0.2s]">.</span>
+                                    <span className="animate-bounce [animation-delay:0.4s]">.</span>
+                                </div> : <span>Take the quiz</span>}
                             </button>
                         </div>
                     </div>

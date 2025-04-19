@@ -1,0 +1,79 @@
+[
+  {
+    "index": 1,
+    "question": "Have you ever felt a romantic or emotional attraction to someone of the same gender?",
+    "options": [
+      {"answer": "Yes, multiple times", "impact": 12},
+      {"answer": "Yes, once or twice", "impact": 8},
+      {"answer": "Not sure", "impact": 4},
+      {"answer": "Never", "impact": -5}
+    ],
+    "selectedIndex": -1
+  },
+  {
+    "index": 2,
+    "question": "Do you feel more comfortable discussing personal topics with friends of the same gender?",
+    "options": [
+      {"answer": "Always", "impact": 10},
+      {"answer": "Sometimes", "impact": 5},
+      {"answer": "Rarely", "impact": -3},
+      {"answer": "No, I prefer opposite-gender friends for this", "impact": -8}
+    ],
+    "selectedIndex": -1
+  },
+  {
+    "index": 3,
+    "question": "How do you react to same-gender romantic scenes in movies or TV shows?",
+    "options": [
+      {"answer": "I feel deeply connected or inspired", "impact": 15},
+      {"answer": "I enjoy them casually", "impact": 7},
+      {"answer": "Neutral/no strong opinion", "impact": 0},
+      {"answer": "Uncomfortable or disinterested", "impact": -10}
+    ],
+    "selectedIndex": -1
+  },
+  {
+    "index": 4,
+    "question": "Have you ever questioned your sexual orientation?",
+    "options": [
+      {"answer": "Yes, frequently", "impact": 12},
+      {"answer": "Yes, occasionally", "impact": 8},
+      {"answer": "Maybe once or twice", "impact": 3},
+      {"answer": "No, never", "impact": -10}
+    ],
+    "selectedIndex": -1
+  },
+  {
+    "index": 5,
+    "question": "Do you feel a sense of belonging in LGBTQ+ spaces or communities?",
+    "options": [
+      {"answer": "Strongly agree", "impact": 15},
+      {"answer": "Somewhat agree", "impact": 9},
+      {"answer": "Neutral", "impact": 2},
+      {"answer": "Disagree", "impact": -12}
+    ],
+    "selectedIndex": -1
+  },
+  {
+    "index": 6,
+    "question": "How do you perceive your future relationships?",
+    "options": [
+      {"answer": "Envision being with someone of the same gender", "impact": 20},
+      {"answer": "Open to any gender", "impact": 10},
+      {"answer": "Unsure", "impact": 5},
+      {"answer": "Only see myself with the opposite gender", "impact": -15}
+    ],
+    "selectedIndex": -1
+  },
+  {
+    "index": 7,
+    "question": "How do you respond to someone assuming you're LGBTQ+?",
+    "options": [
+      {"answer": "Proud or validated", "impact": 18},
+      {"answer": "Don’t mind either way", "impact": 5},
+      {"answer": "Annoyed but not offended", "impact": -5},
+      {"answer": "Strongly correct them", "impact": -12}
+    ],
+    "selectedIndex": -1
+  }
+]
