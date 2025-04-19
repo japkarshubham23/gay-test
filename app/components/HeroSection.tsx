@@ -7,6 +7,7 @@ import TimerIcon from "@/app/icons/TimerIcon";
 import FaceScanIcon from "@/app/icons/FaceScanIcon";
 import PersonalizeIcon from "@/app/icons/PersonalizeIcon";
 import { useState } from "react";
+import Logo from "@/app/images/Logo";
 
 
 export default function HeroSection() {
@@ -31,10 +32,13 @@ export default function HeroSection() {
 
     return <div style={{
         backgroundImage: `url(${gayTest.src})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-    }} className={"bg-size-[800px] md:bg-cover"}>
+        backgroundRepeat: 'no-repeat'
+    }} className={"bg-center md:bg-bottom bg-size-[750px] md:bg-size-[1100px]"}>
         <div className={"bg-[linear-gradient(180deg,rgba(7,8,2,0)_4.26%,rgba(7,8,2,0.431756)_30.86%,rgba(7,8,2,0.779555)_59.73%,#070802_85.25%)] md:bg-[linear-gradient(180deg,rgba(7,8,2,0)_5%,rgba(7,8,2,0.431756)_36.2%,rgba(7,8,2,0.779555)_69.71%,#070802_100%)]"}>
+            <header className={"flex justify-center pt-[24px] md:pt-[50px] pb-[30px]"}>
+                <Logo />
+            </header>
+
             <div className={"flex flex-col justify-between pb-2.5 px-[16px] md:px-0 max-w-[500px] m-auto h-[calc(100vh_-_115px)]"}>
                 <div className={"flex justify-center gap-6"}>
                     <div
@@ -73,7 +77,7 @@ export default function HeroSection() {
                         <div className={"py-4.5 md:py-8 px-2.5 w-full"}>
                             <button
                                 style={btnStyle}
-                                className={`rounded-[10px] w-full bg-white py-3.5 md:py-[18px] text-xl font-medium transition duration-300`}
+                                className={`rounded-[10px] w-full bg-white py-3.5 md:py-[18px] text-xl font-medium transition duration-500 md:duration-300`}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}>
                                 Take the quiz

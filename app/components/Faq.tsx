@@ -57,7 +57,7 @@ export default function Faq() {
     return <div className={"max-w-[860px] m-auto py-[80px]"}>
             <h2 className={"text-center text-[36px] md:text-[40px] font-bold pb-[70px]"}>FAQ’s</h2>
 
-            <ul className={"flex flex-col gap-5 md:gap-7 px-4 md:px-0"}>
+            <ul className={"flex flex-col gap-5 md:gap-7 px-4 lg:px-0"}>
                 {faq.map((faq: FaqProps, index: number) => {
                     const isActive = activeIndex === index;
 
