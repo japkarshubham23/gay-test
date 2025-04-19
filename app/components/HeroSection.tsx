@@ -40,12 +40,12 @@ export default function HeroSection() {
 
                 <div>
                     <div className={"flex flex-col justify-center items-center"}>
-                        <div style={{
+                        <h2 style={{
                             background: "linear-gradient(90deg, #3550E6 5.25%, #9F39E3 18.54%, #F439B2 34.32%, #EB4934 48.44%, #E87D2E 59.24%, #F2B62B 69.21%, #F3DC38 79.59%, #C4F353 91.64%)",
                             WebkitBackgroundClip: "text",
                             WebkitTextFillColor: "transparent",
                         }} className={"text-[42px] md:text-6xl font-extrabold md:font-bold"}>Am I GAY?
-                        </div>
+                        </h2>
                         <div className={"text-[16px] md:text-[22px] leading-7"}>Take a quiz to check if you’re gay or not.</div>
 
                         <div className={"py-4.5 md:py-8 px-2.5 w-full"}>

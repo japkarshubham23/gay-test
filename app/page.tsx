@@ -1,5 +1,6 @@
 import Logo from "@/app/images/Logo";
 import HeroSection from "@/app/components/HeroSection";
+import Faq from "@/app/components/Faq";
 
 export default function Home() {
     return (
@@ -9,6 +10,7 @@ export default function Home() {
             </header>
 
             <HeroSection />
+            <Faq />
             <footer>
 
             </footer>
