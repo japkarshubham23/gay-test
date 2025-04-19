@@ -1,5 +1,5 @@
 export default function CompleteIcon() {
-    return <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    return <svg width="30" height="30" viewBox="4 4 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_106_691)">
             <circle cx="18" cy="18" r="12" fill="#343935"/>
         </g>

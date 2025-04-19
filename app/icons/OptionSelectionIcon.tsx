@@ -1,5 +1,5 @@
 export default function OptionSelectionIcon() {
-    return <svg width="30" height="30" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    return <svg width="100%" height="30" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_81_180)">
             <circle cx="15" cy="13" r="11" fill="url(#paint0_linear_81_180)"/>
         </g>

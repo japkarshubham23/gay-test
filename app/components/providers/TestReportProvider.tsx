@@ -15,6 +15,8 @@ interface TestReportContextType {
     quiz: ITestReport[];
     answer: (report: ITestReport) => void;
     clearAnswer: () => void;
+    activeQuizIndex: number;
+    setActiveQuizIndex: (index: number) => void;
 }
 
 const TestReportContext = createContext<TestReportContextType | undefined>(undefined);
@@ -25,6 +27,7 @@ interface TestReportProviderProps {
 
 export const TestReportProvider: React.FC<TestReportProviderProps> = ({ children }) => {
     const [quiz, setQuiz] = useState<ITestReport[]>(testQuestions);
+    const [activeQuizIndex, setActiveQuizIndex] = useState<number>(1);
 
     const answer = (report: ITestReport) => {
         setQuiz((prev:ITestReport[]): ITestReport[] => {
@@ -42,7 +45,7 @@ export const TestReportProvider: React.FC<TestReportProviderProps> = ({ children
     };
 
     return (
-        <TestReportContext.Provider value={{ quiz, answer, clearAnswer }}>
+        <TestReportContext.Provider value={{ quiz, answer, clearAnswer, activeQuizIndex, setActiveQuizIndex }}>
             {children}
         </TestReportContext.Provider>
     );

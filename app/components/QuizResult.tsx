@@ -43,18 +43,20 @@ function ProgressBar() {
         <div className={"flex items-center justify-between pt-2.5"}>
             {Array.from({ length: 11 }).map((_, i) => (
                 <div key={i} className={"transition-all duration-700 ease-in-out"}>
-                    {i != 0 && ((products > i) ? <CompleteIcon /> : <span style={{
-                        opacity: (products != i) ? 0.2 : 1,
-                        fontSize: (products != i) ? "16px" : "20px"
-                    }} className={`font-medium transition-all duration-700 ease-in-out`}>{`Q${i}`}</span>)}
+                    {i != 0 && ((products > i) ? <CompleteIcon /> : <span
+                            className={`font-medium transition-all duration-700 ease-in-out 
+                        ${products !== i ? 'opacity-20 text-sm md:text-base' : 'opacity-100 text-base md:text-xl'}`}>
+                      {`Q${i}`}
+                    </span>
+                    )}
                 </div>
             ))}
         </div>
     </div>
 }
 export default function QuizResult() {
-    const {quiz, answer} = useTestReport();
-    const activeQuiz = quiz.find((e: ITestReport) => e.selectedIndex === -1)
+    const {quiz, answer, activeQuizIndex, setActiveQuizIndex} = useTestReport();
+    const activeQuiz = quiz.find((e: ITestReport) => e.index === activeQuizIndex)
     const [buttonAction, setButtonAction] = useState({
         hover: -1,
         selected: -1
@@ -79,11 +81,20 @@ export default function QuizResult() {
                 selectedIndex: index
             })
             btnActionDefault()
+            setActiveQuizIndex(activeQuiz.index + 1)
         }, 1000)
     }
 
+    useEffect(() => {
+        setButtonAction(
+            {
+                hover: -1,
+                selected: activeQuiz?.selectedIndex ?? -1
+            }
+        )
+    }, [activeQuiz]);
 
-    return <div className={"min-h-[calc(100dvh_-_6px)]"}>
+    return <div className={"min-h-[calc(100dvh_-_6px)] px-4"}>
         <header className={"flex justify-center pt-[24px] md:pt-[50px] pb-[56px]"}>
             <Logo />
         </header>
@@ -94,14 +105,16 @@ export default function QuizResult() {
 
             <div>
                 <div className={"flex pb-[46px]"}>
-                    <div>
+                    <div onClick={() => {
+                        setActiveQuizIndex(activeQuizIndex - 1)
+                    }} className={`w-4 md:w-4.5 transition-all duration-500 ease-in-out pt-1 ${(activeQuiz?.index !== 1) ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}`}>
                         <ArrowIcon/>
                     </div>
                     <div
-                        className={"text-center text-[26px] font-medium leading-10 flex-1"}>{activeQuiz?.question}</div>
+                        className={"text-center text-lg md:text-[26px] font-medium leading-7 md:leading-10 flex-1"}>{activeQuiz?.question}</div>
                 </div>
 
-                <ul className={"grid grid-cols-2 gap-[50px]"}>
+                <ul className={"grid grid-cols-2 gap-[10px] md:gap-[50px]"}>
                     {activeQuiz?.options.map((option: IOption, index: number) => {
                         const isOtherOptionClicked = buttonAction.selected === index;
                         const disableHover = (buttonAction.selected !== -1 && buttonAction.selected !== index)
@@ -110,15 +123,16 @@ export default function QuizResult() {
                                    onClick={() => onSelectOption(index)}
                                    onMouseEnter={() => setButtonAction(e=> ({...e, hover: index}))}
                                    onMouseLeave={() => setButtonAction(e=> ({...e, hover: -1}))}
-                                   className={`border border-[#565656] h-fit rounded-xl p-[1px] cursor-pointer ${((buttonAction.hover === index || isOtherOptionClicked) && !disableHover) ? "border border-transparent bg-[linear-gradient(90deg,_#464CD0_0%,_#8038BD_13.46%,_#AC3495_29.81%,_#D7463F_44.23%,_#E48C2F_57.21%,_#D7B438_72.6%,_#CFB63A_85.58%,_#B6BD41_100%)] bg-origin-border bg-clip-padding" : ""}`}>
-                            <div className={"relative flex bg-black px-5 py-4 rounded-xl"}>
-                                <div className={"flex-1 pr-[22px]"}>
+                                   className={`border border-[#565656] rounded-xl p-[1px] cursor-pointer ${((buttonAction.hover === index || isOtherOptionClicked) && !disableHover) ? "border border-transparent bg-[linear-gradient(90deg,_#464CD0_0%,_#8038BD_13.46%,_#AC3495_29.81%,_#D7463F_44.23%,_#E48C2F_57.21%,_#D7B438_72.6%,_#CFB63A_85.58%,_#B6BD41_100%)] bg-origin-border bg-clip-padding" : ""}`}>
+                            <div className={"relative flex bg-black px-3 md:px-5 py-3 md:py-4 rounded-xl h-full"}>
+                                <div className={"flex flex-1 items-center pr-[22px] text-sm md:text-[22px]"}>
                                     {option.answer}
                                 </div>
                                 <div
                                     className={`
                                             absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 
                                             transition-all duration-500 ease-in-out
+                                            w-[20px] md:w-[22px]
                                             ${buttonAction.selected === index ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}
                                         `}>
                                     <OptionSelectionIcon />
