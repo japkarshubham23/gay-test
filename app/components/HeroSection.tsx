@@ -48,11 +48,11 @@ export default function HeroSection() {
         backgroundRepeat: 'no-repeat'
     }} className={"bg-center md:bg-bottom bg-size-[750px] md:bg-size-[1100px]"}>
         <div className={"bg-[linear-gradient(180deg,rgba(7,8,2,0)_4.26%,rgba(7,8,2,0.431756)_30.86%,rgba(7,8,2,0.779555)_59.73%,#070802_85.25%)] md:bg-[linear-gradient(180deg,rgba(7,8,2,0)_5%,rgba(7,8,2,0.431756)_36.2%,rgba(7,8,2,0.779555)_69.71%,#070802_100%)]"}>
-            <header className={"flex justify-center pt-[24px] md:pt-[50px] pb-[30px]"}>
+            <header className={"flex justify-center py-5 md:py-8"}>
                 <Image src={logo.src} alt={"logo"} height={100} width={100} />
             </header>
 
-            <div className={"flex flex-col justify-between pb-2.5 px-[16px] md:px-0 max-w-[500px] m-auto h-[calc(100vh_-_115px)]"}>
+            <div className={"flex flex-col justify-between pb-2.5 px-[16px] md:px-0 max-w-[500px] m-auto h-[calc(100vh_-_110px)] md:h-[calc(100vh_-_135px)]"}>
                 <div className={"flex justify-center gap-6"}>
                     <div
                         className={"flex gap-1 md:gap-3 px-2.5 md:px-3 py-2 md:py-2.5 bg-[#11100C] border-[1px] rounded-md border-r-2 border-[#3A3935]"}>
