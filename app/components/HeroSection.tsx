@@ -9,6 +9,7 @@ import PersonalizeIcon from "@/app/icons/PersonalizeIcon";
 import { useState } from "react";
 import Logo from "@/app/images/Logo";
 import { useRouter } from "next/navigation";
+import QuestionsIcon from "@/app/icons/QuestionsIcon";
 
 
 export default function HeroSection() {
@@ -59,7 +60,7 @@ export default function HeroSection() {
                             <TickIcon/>
                         </div>
                         <div>
-                            <div className={"text-[10px] md:text-xs pb-0.5 font-medium"}>RATED BY REAL USERS</div>
+                            <div className={"text-[10px] md:text-xs pb-0.5 font-medium"}>Verified by Real People</div>
                             <div className={"text-xs md:text-[16px] font-medium"}>92.4% Accuracy</div>
                         </div>
                     </div>
@@ -71,7 +72,7 @@ export default function HeroSection() {
                         </div>
                         <div>
                             <div className={"text-[10px] md:text-xs pb-0.5 font-medium"}>RATED BY REAL USERS</div>
-                            <div className={"text-xs md:text-[16px] font-medium"}>92.4% Accuracy</div>
+                            <div className={"text-xs md:text-[16px] font-medium"}>98.9% Liked</div>
                         </div>
                     </div>
                 </div>
@@ -84,7 +85,7 @@ export default function HeroSection() {
                             WebkitTextFillColor: "transparent",
                         }} className={"text-[42px] md:text-6xl font-extrabold md:font-bold"}>Am I GAY?
                         </h2>
-                        <div className={"text-[16px] md:text-[22px] leading-7"}>Take a quiz to check if you’re gay or not.</div>
+                        <div className={"text-[16px] md:text-[22px] leading-7 text-center"}>Take a quiz to check if you’re gay or not.</div>
 
                         <div className={"py-4.5 md:py-8 px-2.5 w-full"}>
                             <button
@@ -102,27 +103,27 @@ export default function HeroSection() {
                             </button>
                         </div>
                     </div>
-                    <div className={"flex md:grid md:grid-cols-3 gap-2.5 md:gap-5"}>
+                    <div className={"flex md:grid md:grid-cols-3 flex-wrap gap-2.5 md:gap-5"}>
                         <div
                             className={"flex flex-1 justify-center items-center rounded-[10px] gap-1.5 px-2 md:px-3 py-2.5 border-[1px] border-[#3C3C3C] cursor-auto"}>
                             <div className={"h-4 md:h-6"}>
                                 <TimerIcon/>
                             </div>
-                            <span className={"font-medium text-[10px] md:text-[16px] leading-2.5 md:leading-[21px]"}>1 min quiz</span>
+                            <span className={"font-medium text-[10px] md:text-[16px] leading-2.5 md:leading-[21px] whitespace-nowrap"}>1 min quiz</span>
                         </div>
                         <div
                             className={"flex flex-1 justify-center items-center rounded-[10px] gap-1.5 px-2 md:px-3 py-2.5 border-[1px] border-[#3C3C3C] cursor-auto"}>
                             <div className={"h-4 md:h-6"}>
-                                <FaceScanIcon/>
+                                <QuestionsIcon/>
                             </div>
-                            <span className={"font-medium text-[10px] md:text-[16px] leading-2.5 md:leading-[21px]"}>Face Scan</span>
+                            <span className={"font-medium text-[10px] md:text-[16px] leading-2.5 md:leading-[21px] whitespace-nowrap"}>10 questions</span>
                         </div>
                         <div
                             className={"flex flex-1 justify-center items-center rounded-[10px] gap-1.5 px-2 md:px-3 py-2.5 border-[1px] border-[#3C3C3C] cursor-auto"}>
                             <div className={"h-4 md:h-6"}>
                                 <PersonalizeIcon/>
                             </div>
-                            <span className={"font-medium text-[10px] md:text-[16px] leading-2.5 md:leading-[21px]"}>Personalized</span>
+                            <span className={"font-medium text-[10px] md:text-[16px] leading-2.5 md:leading-[21px] whitespace-nowrap"}>Personalized</span>
                         </div>
                     </div>
                 </div>
