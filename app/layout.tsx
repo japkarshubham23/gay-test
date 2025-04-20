@@ -68,7 +68,7 @@ export default function RootLayout({
             {children}
             <div style={{
                 background: "linear-gradient(90deg, #3850D4 0%, #8636BB 15.38%, #B9358A 33.65%, #DC4936 50%, #E57B2D 62.5%, #E2AE34 74.04%, #CCBA3B 86.06%, #9DC147 100%)"
-            }} className={"h-1.5 w-dvw"}>
+            }} className={"h-1.5 w-dw"}>
             </div>
     </body>
     </html>);
