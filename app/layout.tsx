@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
 import {SITE_NAME} from './utils/constant';
+import Script from "next/script";
 
 const inter = Inter({
     subsets: ["latin"], variable: "--font-inter", display: "swap",
@@ -49,7 +50,18 @@ export default function RootLayout({
                                    }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return (<html lang="en">
+    return (<html lang="en" suppressHydrationWarning>
+    <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-T0QHXH1HHS"
+        strategy="afterInteractive"/>
+    <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-T0QHXH1HHS');
+          `}
+    </Script>
     <body
         cz-shortcut-listen="true"
         className={`${inter.variable} antialiased --font-inter`}>
