@@ -46,7 +46,7 @@ export default function HeroSection() {
     return <div style={{
         backgroundImage: `url(${gayTest.src})`,
         backgroundRepeat: 'no-repeat'
-    }} className={"bg-center md:bg-bottom bg-size-[750px] xl:bg-size-[1100px]"}>
+    }} className={"bg-center md:bg-bottom backgroundImageSize"}>
         <div className={"bg-[linear-gradient(180deg,rgba(7,8,2,0)_4.26%,rgba(7,8,2,0.431756)_30.86%,rgba(7,8,2,0.779555)_59.73%,#070802_85.25%)] lg:bg-[linear-gradient(180deg,rgba(7,8,2,0)_5%,rgba(7,8,2,0.431756)_36.2%,rgba(7,8,2,0.779555)_69.71%,#070802_100%)]"}>
             <header className={"flex justify-center py-5 lg:py-8"}>
                 <Image src={logo.src} alt={"logo"} height={100} width={100} />

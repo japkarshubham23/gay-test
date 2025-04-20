@@ -16,3 +16,31 @@ body {
     background: var(--background);
     color: var(--foreground);
 }
+
+.backgroundImageSize {
+    background-size: auto !important;
+}
+@media (max-height: 1000px) {
+    .backgroundImageSize {
+        background-size: 950px !important;
+    }
+}
+
+
+@media (max-height: 800px) {
+    .backgroundImageSize {
+        background-size: 850px !important;
+    }
+}
+
+@media (max-height: 600px) {
+    .backgroundImageSize {
+        background-size: 750px !important;
+    }
+}
+
+@media (max-height: 500px) {
+    .backgroundImageSize {
+        background-size: 600px !important;
+    }
+}
