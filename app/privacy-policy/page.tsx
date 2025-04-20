@@ -66,7 +66,7 @@ export default function Page() {
                 <h2 className="text-2xl font-semibold text-white mb-6">Contact Us</h2>
                 <p className="text-gray-300 mb-4">
                     If you have any questions about this Privacy Policy, please contact us at <a
-                    href={`mailto:support@${SITE_DOMAIN_NAME}`} className="text-white">support@{SITE_DOMAIN_NAME}</a>.
+                    href={`mailto:support@${SITE_DOMAIN_NAME}`} className="text-white" target={"_blank"} rel={"nofollow"}>support@{SITE_DOMAIN_NAME}</a>.
                 </p>
             </div>
         </section>

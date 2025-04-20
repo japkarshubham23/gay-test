@@ -12,7 +12,7 @@ export default function page() {
                 </p>
 
                 <p className="text-gray-300 mb-6">
-                    You can reach us via email at <a href={`mailto:support@${SITE_DOMAIN_NAME}`} className={"underline"}>support@{SITE_DOMAIN_NAME}</a>. We will get back to you as soon as possible.
+                    You can reach us via email at <a href={`mailto:support@${SITE_DOMAIN_NAME}`} className={"underline"} target={"_blank"} rel={"nofollow"}>support@{SITE_DOMAIN_NAME}</a>. We will get back to you as soon as possible.
                 </p>
 
                 <p className="text-gray-300 mb-6">
