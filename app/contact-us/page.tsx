@@ -1,7 +1,7 @@
 import {SITE_DOMAIN_NAME} from "@/app/utils/constant";
 
 export default function page() {
-    return <div className=" text-white font-sans min-h-[calc(100vh_-_6px)]">
+    return <div className=" text-white font-sans min-h-[calc(100dvh_-_6px)]">
         <section className="py-12 ">
             <div className="container mx-auto px-4 max-w-4xl">
                 <h2 className="text-2xl font-semibold text-white mb-6">We'd Love to Hear From You</h2>

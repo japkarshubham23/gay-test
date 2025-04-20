@@ -1,5 +1,5 @@
 export default function Page() {
-    return <div className="bg-black text-white font-sans min-h-[calc(100vh_-_6px)]">
+    return <div className="bg-black text-white font-sans min-h-[calc(100dvh_-_6px)]">
         <section className="py-12 bg-black">
             <div className="container mx-auto px-4 max-w-4xl">
                 <h2 className="text-2xl font-semibold mb-6 text-white">Our Team</h2>
