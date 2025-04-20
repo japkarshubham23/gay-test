@@ -4,12 +4,12 @@ import gayTest from "@/app/images/gay-test-banner.png"
 import TickIcon from "@/app/icons/TickIcon";
 import StartIcon from "@/app/icons/StartIcon";
 import TimerIcon from "@/app/icons/TimerIcon";
-import FaceScanIcon from "@/app/icons/FaceScanIcon";
 import PersonalizeIcon from "@/app/icons/PersonalizeIcon";
 import { useState } from "react";
-import Logo from "@/app/images/Logo";
 import { useRouter } from "next/navigation";
 import QuestionsIcon from "@/app/icons/QuestionsIcon";
+import Image from "next/image";
+import logo from "../images/logo.png"
 
 
 export default function HeroSection() {
@@ -49,7 +49,7 @@ export default function HeroSection() {
     }} className={"bg-center md:bg-bottom bg-size-[750px] md:bg-size-[1100px]"}>
         <div className={"bg-[linear-gradient(180deg,rgba(7,8,2,0)_4.26%,rgba(7,8,2,0.431756)_30.86%,rgba(7,8,2,0.779555)_59.73%,#070802_85.25%)] md:bg-[linear-gradient(180deg,rgba(7,8,2,0)_5%,rgba(7,8,2,0.431756)_36.2%,rgba(7,8,2,0.779555)_69.71%,#070802_100%)]"}>
             <header className={"flex justify-center pt-[24px] md:pt-[50px] pb-[30px]"}>
-                <Logo />
+                <Image src={logo.src} alt={"logo"} height={100} width={100} />
             </header>
 
             <div className={"flex flex-col justify-between pb-2.5 px-[16px] md:px-0 max-w-[500px] m-auto h-[calc(100vh_-_115px)]"}>

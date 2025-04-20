@@ -1,11 +1,12 @@
 "use client";
 
-import Logo from "@/app/images/Logo";
 import {useEffect, useRef, useState } from "react";
 import CompleteIcon from "@/app/icons/CompleteIcon";
 import ArrowIcon from "../icons/ArrowIcon";
 import {IOption, ITestReport, useTestReport} from "@/app/components/providers/TestReportProvider";
 import OptionSelectionIcon from "@/app/icons/OptionSelectionIcon";
+import Image from "next/image";
+import logo from "@/app/images/logo.png";
 
 function ProgressBar() {
     const {quiz} = useTestReport();
@@ -216,7 +217,7 @@ export default function QuizResult() {
 
     return <div className={"flex flex-col min-h-[calc(100dvh_-_6px)] px-4 md:px-0"}>
         <header className={"flex justify-center pt-[24px] md:pt-[50px] pb-[56px]"}>
-            <Logo />
+            <Image src={logo.src} alt={"logo"} height={100} width={100} />
         </header>
 
         {allAnswered ? <TestReport /> : <TestQuiz />}
