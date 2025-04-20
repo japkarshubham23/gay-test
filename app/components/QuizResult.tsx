@@ -24,7 +24,7 @@ function ProgressBar() {
     }, [ref])
 
     return  <div ref={ref}
-                 className={"relative pb-[110px]"}>
+                 className={"relative"}>
         <div style={{
             width: `${progressInPx}px`,
             background: "linear-gradient(90deg, #3850D4 0%, #8636BB 15.38%, #B9358A 33.65%, #DC4936 50%, #E57B2D 62.5%, #E2AE34 74.04%, #CCBA3B 86.06%, #9DC147 100%)"
@@ -100,7 +100,7 @@ function TestReport() {
     }, [testReport]);
 
     return (
-        <div className="flex flex-col items-center justify-center bg-black text-white pt-24">
+        <div className="flex flex-col items-center justify-center bg-black text-white py-24">
             <div className="text-[36px] md:text-[46px] leading-8 md:leading-10 font-medium">
                 You’re
             </div>
@@ -168,7 +168,7 @@ function TestQuiz() {
         {/**/}
         <ProgressBar />
 
-        <div>
+        <div className={"py-[110px]"}>
             <div className={"flex pb-[46px]"}>
                 <div onClick={() => {
                     setActiveQuizIndex(activeQuizIndex - 1)
