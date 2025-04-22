@@ -61,7 +61,7 @@ export default function HeroSection() {
                         </div>
                         <div>
                             <div className={"text-[10px] md:text-xs pb-0.5 font-medium"}>Verified by Real People</div>
-                            <div className={"text-xs md:text-[16px] font-medium"}>92.2% Accuracy</div>
+                            <div className={"text-xs md:text-[16px] font-medium"}>92.4% Accuracy</div>
                         </div>
                     </div>
 
