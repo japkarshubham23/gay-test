@@ -70,7 +70,9 @@ export default function Faq() {
                             setActiveIndex(index)
                         }} className={"grid grid-cols-[1fr_25px] justify-between pb-1.5 cursor-pointer"}>
                             <span className={"text-[16px] md:text-[22px] font-light leading-7 md:leading-10"}>{faq.title}</span>
-                            <button className="flex justify-center mt-[5px] pt-[10px] relative">
+                            <button type="button"
+                                    aria-label={isActive ? 'Collapse section' : 'Expand section'}
+                                    aria-expanded={isActive} className="flex justify-center mt-[5px] pt-[10px] relative">
                                 <div className={`absolute transition-transform duration-300 ${!isActive ? 'rotate-90' : ''}`}>
                                     <MinusIcon />
                                 </div>

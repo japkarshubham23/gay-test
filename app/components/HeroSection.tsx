@@ -1,6 +1,6 @@
 "use client";
 
-import gayTest from "@/app/images/gay-test-banner.png"
+import gayTest from "@/app/images/gay-test-banner.avif"
 import TickIcon from "@/app/icons/TickIcon";
 import StartIcon from "@/app/icons/StartIcon";
 import TimerIcon from "@/app/icons/TimerIcon";
