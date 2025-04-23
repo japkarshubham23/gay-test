@@ -23,10 +23,10 @@ export const metadata: Metadata = {
         description: "Wondering if you're gay? Take our evidence-based gay test and get instant results. It's free, fun, and private.",
         url: SITE_NAME,
         siteName: `Gay Test by ${SITE_DOMAIN_NAME}`,
-        images: [{
-            url: "https://yourdomain.com/og-image.jpg", // Update with your OG image
-            width: 1200, height: 630, alt: "Gay Test – Accurate, Free, and Fun Quiz",
-        },],
+        // images: [{
+        //     url: "https://yourdomain.com/og-image.jpg",
+        //     width: 1200, height: 630, alt: "Gay Test – Accurate, Free, and Fun Quiz",
+        // },],
         type: "website",
     },
     robots: {
