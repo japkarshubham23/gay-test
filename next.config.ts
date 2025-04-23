@@ -9,21 +9,21 @@ const nextConfig: NextConfig = {
             },
         },
     },
-    async redirects() {
-        return [
-            {
-                source: '/(.*)',
-                has: [
-                    {
-                        type: 'host',
-                        value: 'mygaytest.com',
-                    },
-                ],
-                permanent: true,
-                destination: 'https://mygaytest.com/:path*',
-            },
-        ]
-    }
+    // async redirects() {
+    //     return [
+    //         {
+    //             source: '/(.*)',
+    //             has: [
+    //                 {
+    //                     type: 'host',
+    //                     value: 'mygaytest.com',
+    //                 },
+    //             ],
+    //             permanent: true,
+    //             destination: 'https://mygaytest.com/:path*',
+    //         },
+    //     ]
+    // }
 };
 
 export default nextConfig;
