@@ -82,7 +82,7 @@ function TestReport() {
                 setPercentage(current);
                 setTimeout(stepUp, 40); // speed of step up
             } else {
-                setTimeout(() => stepDown(), 500); // pause at 100%
+                stepDown()
             }
         };
 

@@ -1,111 +1,111 @@
 [
   {
     "index": 1,
-    "question": "Who are you attracted to?",
+    "question": "Who do you typically notice first in a room? 👀",
     "options": [
-      { "answer": "Men only 🌈",     "impact": 12 },
-      { "answer": "Women only",      "impact": 0  },
-      { "answer": "Both genders 😊", "impact": 8  },
-      { "answer": "Neither gender",  "impact": 0  }
+      { "answer": "Same gender 🌈", "impact": 10 },
+      { "answer": "Opposite gender", "impact": 0 },
+      { "answer": "Both equally", "impact": 8 },
+      { "answer": "Nobody really", "impact": -5 }
     ],
-    "selectedIndex" : -1
+    "selectedIndex": -1
   },
   {
     "index": 2,
-    "question": "Which lips excite you?",
+    "question": "Your celebrity crush is... 🌟",
     "options": [
-      { "answer": "Male lips 😏",   "impact": 12 },
-      { "answer": "Female lips",   "impact": 0  },
-      { "answer": "Both lips 😉",  "impact": 8  },
-      { "answer": "No kissing",    "impact": -5 }
+      { "answer": "Same gender 🎬", "impact": 12 },
+      { "answer": "Opposite gender", "impact": 0 },
+      { "answer": "Multiple genders", "impact": 9 },
+      { "answer": "No one famous", "impact": -3 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 3,
-    "question": "Favorite porn type?",
+    "question": "Imagine your wedding partner: 💍",
     "options": [
-      { "answer": "Gay porn 🌈",     "impact": 12 },
-      { "answer": "Straight porn",   "impact": 0  },
-      { "answer": "Both types 😉",   "impact": 8  },
-      { "answer": "No interest",     "impact": 0  }
+      { "answer": "Same gender ❤️", "impact": 15 },
+      { "answer": "Opposite gender", "impact": 0 },
+      { "answer": "Not sure yet", "impact": 7 },
+      { "answer": "No marriage", "impact": -4 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 4,
-    "question": "Who do you fantasize?",
+    "question": "Your social media follows... 📱",
     "options": [
-      { "answer": "Men only",     "impact": 12 },
-      { "answer": "Women only",   "impact": 0  },
-      { "answer": "Both 😊",       "impact": 8  },
-      { "answer": "No fantasy",   "impact": 0  }
+      { "answer": "LGBTQ+ creators 🏳️🌈", "impact": 10 },
+      { "answer": "Mainstream content", "impact": 0 },
+      { "answer": "Mix of both", "impact": 6 },
+      { "answer": "Just memes", "impact": -2 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 5,
-    "question": "Preferred date spot?",
+    "question": "How would you feel about a same-gender date? 😊",
     "options": [
-      { "answer": "Gay bar 🌈",    "impact": 12 },
-      { "answer": "Café date",     "impact": 0  },
-      { "answer": "Dance club",    "impact": 5  },
-      { "answer": "Park picnic",   "impact": 0  }
+      { "answer": "Excited! 🌈", "impact": 14 },
+      { "answer": "Curious", "impact": 7 },
+      { "answer": "Neutral", "impact": 3 },
+      { "answer": "Uncomfortable 😬", "impact": -8 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 6,
-    "question": "Reaction to gay friends?",
+    "question": "Your best friend comes out 🌈",
     "options": [
-      { "answer": "Supportive 👍",    "impact": 8  },
-      { "answer": "Indifferent",      "impact": 0  },
-      { "answer": "Uncomfortable 😕", "impact": -5 },
-      { "answer": "No friends",      "impact": 0  }
+      { "answer": "Me too!", "impact": 12 },
+      { "answer": "Happy for them", "impact": 3 },
+      { "answer": "Confused", "impact": -2 },
+      { "answer": "Don't care 🤷♂️", "impact": -5 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 7,
-    "question": "Think of men often?",
+    "question": "Do you identify with LGBTQ+ labels? 🏳️🌈",
     "options": [
-      { "answer": "Often 🌈",     "impact": 12 },
-      { "answer": "Rarely",       "impact": 0  },
-      { "answer": "Sometimes 😊", "impact": 8  },
-      { "answer": "Never",        "impact": 0  }
+      { "answer": "Yes, definitely", "impact": 15 },
+      { "answer": "Maybe", "impact": 6 },
+      { "answer": "Still figuring out", "impact": 4 },
+      { "answer": "No ❌", "impact": -10 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 8,
-    "question": "Which movie you prefer?",
+    "question": "How often same-gender crushes? 💘",
     "options": [
-      { "answer": "Brokeback Mountain 🌈", "impact": 12 },
-      { "answer": "Moonlight 🎬",           "impact": 8  },
-      { "answer": "Titanic",               "impact": 0  },
-      { "answer": "Star Wars",             "impact": 0  }
+      { "answer": "Often 😍", "impact": 12 },
+      { "answer": "Sometimes", "impact": 7 },
+      { "answer": "Once/twice", "impact": 3 },
+      { "answer": "Never 🚫", "impact": -8 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 9,
-    "question": "How do you dress?",
+    "question": "Future partner's gender? 🔮",
     "options": [
-      { "answer": "Masculine",         "impact": 0  },
-      { "answer": "Feminine 😊",       "impact": 8  },
-      { "answer": "Androgynous 🌈",    "impact": 12 },
-      { "answer": "Casual wear",       "impact": 0  }
+      { "answer": "Same 🌟", "impact": 14 },
+      { "answer": "Opposite", "impact": 0 },
+      { "answer": "Either", "impact": 9 },
+      { "answer": "Not interested", "impact": -6 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 10,
-    "question": "Ideal partner lead?",
+    "question": "LGBTQ+ dating apps? 📱",
     "options": [
-      { "answer": "Male lead 😊",   "impact": 8  },
-      { "answer": "Female lead",    "impact": 0  },
-      { "answer": "Both leads",     "impact": 12 },
-      { "answer": "No preference",  "impact": 0  }
+      { "answer": "Already on one", "impact": 15 },
+      { "answer": "Would try", "impact": 7 },
+      { "answer": "Maybe", "impact": 3 },
+      { "answer": "Never ❌", "impact": -10 }
     ],
     "selectedIndex": -1
   }
