@@ -7,6 +7,7 @@ import {IOption, ITestReport, useTestReport} from "@/app/components/providers/Te
 import OptionSelectionIcon from "@/app/icons/OptionSelectionIcon";
 import Image from "next/image";
 import logo from "@/app/images/logo.png";
+import { useRouter } from "next/navigation";
 
 function ProgressBar() {
     const {quiz} = useTestReport();
@@ -175,8 +176,8 @@ function TestQuiz() {
                 }} className={`w-4.5 transition-all duration-500 ease-in-out pt-0.5 md:pt-1 ${(activeQuiz?.index !== 1) ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}`}>
                     <ArrowIcon/>
                 </div>
-                <div
-                    className={"text-center text-lg md:text-[26px] font-medium leading-7 md:leading-10 flex-1"}>{activeQuiz?.question}</div>
+                <h2
+                    className={"text-center text-lg md:text-[26px] font-medium leading-7 md:leading-10 flex-1"}>{activeQuiz?.question}</h2>
             </div>
 
             <ul className={"grid grid-cols-2 gap-[10px] md:gap-[50px]"}>
@@ -211,13 +212,18 @@ function TestQuiz() {
 }
 
 export default function QuizResult() {
+    const router = useRouter()
     const {quiz} = useTestReport();
 
     const allAnswered = quiz.filter(e => e.selectedIndex !== -1).length === 10;
 
     return <div className={"flex flex-col min-h-[calc(100dvh_-_6px)] px-4 md:px-0"}>
         <header className={"flex justify-center pt-[24px] md:pt-[50px] pb-[56px]"}>
-            <Image src={logo.src} alt={"logo"} height={100} width={100} />
+            <button className={"cursor-pointer"} onClick={() => {
+                router.push('/')
+            }}>
+                <Image src={logo.src} alt={"logo"} height={100} width={100} />
+            </button>
         </header>
 
         {allAnswered ? <TestReport /> : <TestQuiz />}

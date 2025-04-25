@@ -8,41 +8,12 @@ const inter = Inter({
     subsets: ["latin"], variable: "--font-inter", display: "swap",
 });
 
-export const metadata: Metadata = {
-    title: "Gay Test – Discover Your Sexual Orientation | Accurate & Fun Quiz",
-    keywords: ["gay test", "am I gay", "sexuality quiz", "LGBTQ quiz", "online gay test", "gay quiz", "free gay test", "gay test for men", "gay test for women", "sexual orientation test", "queer quiz", "LGBT test", "how gay are you test",],
-    authors: [{name: "Shubham Japkar", url: "https://linkedin.com/in/shubham-japkar"}],
-    creator: "Shubham Japkar",
-    publisher: "Shubham Japkar",
-    metadataBase: new URL(SITE_NAME),
-    alternates: {
-        canonical: SITE_NAME,
-    },
-    openGraph: {
-        title: "Gay Test – Discover Your Sexual Orientation | Accurate & Fun Quiz",
-        description: "Wondering if you're gay? Take our evidence-based gay test and get instant results. It's free, fun, and private.",
-        url: SITE_NAME,
-        siteName: `Gay Test by ${SITE_DOMAIN_NAME}`,
-        // images: [{
-        //     url: "https://yourdomain.com/og-image.jpg",
-        //     width: 1200, height: 630, alt: "Gay Test – Accurate, Free, and Fun Quiz",
-        // },],
-        type: "website",
-    },
-    robots: {
-        index: true, follow: true, nocache: false, googleBot: {
-            index: true, follow: true, noimageindex: false,
-        },
-    },
-};
-
 export default function RootLayout({
                                        children,
                                    }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (<html lang="en" suppressHydrationWarning>
-    <meta name="description" content="Take our free Gay Test to discover more about your sexual orientation. Based on real research, this fun and insightful quiz helps you explore your identity." />
     <body
         cz-shortcut-listen="true"
         className={`${inter.variable} antialiased --font-inter`}>

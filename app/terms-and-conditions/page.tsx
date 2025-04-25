@@ -1,5 +1,15 @@
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Terms and Conditions",
+    authors: [{ name: "Shubham Japkar", url: "https://linkedin.com/in/shubham-japkar" }],
+    creator: "Shubham Japkar",
+    publisher: "Shubham Japkar"
+}
+
 export default function Page() {
     return <div className="bg-black text-white font-sans min-h-[calc(100dvh_-_6px)]">
+        <meta name="description" content="Read the Terms and Conditions for using the services, tools, and content provided by Shubham Japkar. Your continued use of the website constitutes your agreement to these terms." />
         <section className="py-12 bg-black">
             <div className="container mx-auto px-4 max-w-4xl">
                 <h2 className="text-2xl font-semibold mb-6 text-white">Our Team</h2>

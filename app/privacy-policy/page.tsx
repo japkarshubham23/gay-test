@@ -1,7 +1,16 @@
 import {SITE_DOMAIN_NAME} from "@/app/utils/constant";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Privacy Policy",
+    authors: [{ name: "Shubham Japkar", url: "https://linkedin.com/in/shubham-japkar" }],
+    creator: "Shubham Japkar",
+    publisher: "Shubham Japkar"
+};
 
 export default function Page() {
     return <div className="text-white font-sans">
+        <meta name="description" content="Learn how Shubham Japkar's website collects, uses, and protects your data. We value your privacy and ensure your information is never stored or shared unnecessarily." />
         <section className="py-12 ">
             <div className="container mx-auto px-4 max-w-4xl">
 
