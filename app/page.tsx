@@ -7,7 +7,7 @@ import {SITE_DOMAIN_NAME, SITE_NAME} from "@/app/utils/constant";
 const currentYear = new Date().getFullYear();
 
 export const metadata: Metadata = {
-    title: "Gay Test – Discover Your Sexual Orientation | Accurate & Fun Quiz",
+    title: "I am Gay Quiz | Quiz for gay | My gay Quiz",
     keywords: ["gay test", "am I gay", "sexuality quiz", "LGBTQ quiz", "online gay test", "gay quiz", "free gay test", "gay test for men", "gay test for women", "sexual orientation test", "queer quiz", "LGBT test", "how gay are you test",],
     authors: [{name: "Shubham Japkar", url: "https://linkedin.com/in/shubham-japkar"}],
     creator: "Shubham Japkar",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
         canonical: SITE_NAME,
     },
     openGraph: {
-        title: "Gay Test – Discover Your Sexual Orientation | Accurate & Fun Quiz",
-        description: "Wondering if you're gay? Take our evidence-based gay test and get instant results. It's free, fun, and private.",
+        title: "I am Gay Quiz | Quiz for gay | My gay Quiz",
+        description: `Take our fun and insightful "I am gay" quiz to discover more about yourself. a quiz for gay individuals. My gay quiz offers an engaging way to explore your identity.`,
         url: SITE_NAME,
         siteName: `Gay Test by ${SITE_DOMAIN_NAME}`,
         // images: [{
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <div className={"font-sans"}>
-            <meta name="description" content="Take our free Gay Test to discover more about your sexual orientation. Based on real research, this fun and insightful quiz helps you explore your identity." />
+            <meta name="description" content={`Take our fun and insightful "I am gay" quiz to discover more about yourself. a quiz for gay individuals. My gay quiz offers an engaging way to explore your identity.`} />
             <HeroSection />
             <Faq />
             <footer>

@@ -3,7 +3,7 @@ import QuizResult from "../components/QuizResult";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Gay Test Quiz – Find Out Your Sexual Orientation | Fun & Accurate",
+    title: "Gay test Online | Am I gay test",
     keywords: [
         "gay test quiz",
         "am I gay quiz",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
         canonical: "https://yourdomain.com/quiz",
     },
     openGraph: {
-        title: "Gay Test Quiz – Find Out Your Sexual Orientation | Fun & Accurate",
-        description: "Take our free, evidence-based gay test quiz to discover your sexual orientation. Instant results, private, and inclusive for all genders.",
+        title: "Gay test Online | Am I gay test",
+        description: `Whether you're looking for a gay test online or wondering, "Am I gay?", take our My Gay Online Test and learn more about yourself.`,
         // url: "https://yourdomain.com/quiz",
         siteName: "Gay Test by yourdomain.com",
         images: [
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return <TestReportProvider>
-        <meta name="description" content="Take our free, evidence-based gay test quiz to discover your sexual orientation. Instant results, private, and inclusive for all genders." />
+        <meta name="description" content={`Whether you're looking for a gay test online or wondering, "Am I gay?", take our My Gay Online Test and learn more about yourself.`} />
         <QuizResult/>
     </TestReportProvider>
 }
