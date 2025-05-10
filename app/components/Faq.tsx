@@ -1,52 +1,38 @@
 "use client";
-import { useState } from "react";
+import {ReactNode, useState} from "react";
 import MinusIcon from "@/app/icons/MinusIcon";
 
 type FaqProps = {
     title: string;
-    answer: string;
+    answer: string | ReactNode;
 }
 
 const faq: FaqProps[] = [
     {
-        title: "What is the purpose of this Gay Test?",
-        answer: "This quiz is designed to help you reflect on your attractions and identity, offering insight rather than a clinical diagnosis."
+        title: "I am Gay Quiz: Identify Your True Self with a Fun Quiz",
+        answer: "In today’s world, self-discovery and self-acceptance are more important than ever. Sometimes you have questions or doubt on your sexual orientation and you may be curious to know who you are. No problem because we have a \"I am Gay Quiz\" which helps you know about yourself better. The questions in My gay Quiz are designed to be light-hearted, insightful, and give a result based on your answers. Your identity is safe and confidential."
     },
     {
-        title: "How accurate is the Gay Test at reflecting my feelings?",
-        answer: "It’s a self‑guided tool based on common patterns of attraction—helpful for reflection but not definitive."
+        title: "What is an \"I am Gay Quiz?\"",
+        answer: "An \"I am Gay Quiz\" is a fun and engaging way to explore your sexuality. We have made a set of questions that help you judge different feelings under different situations, experiences, and attractions. From questions about romantic preferences to emotional connections, the “Am i Gay” quiz helps you gain clarity with no one judging you."
     },
     {
-        title: "Can taking this test influence my orientation?",
-        answer: "No. The questions are neutral prompts and won’t change your natural feelings or identity."
+        title: "Why Take a Gay Quiz?",
+        answer: "During normal day to day life, we may observe different thought patterns for the opposite gender. Exploring your sexuality is a personal journey, and sometimes it can get very confusing. A gay quiz can be a great starting point for anyone who is not sure about one’s orientation. It’s not meant to label you with something but help you better understand yourself. Whether you’re a teenager figuring things out, an adult exploring your identity, or simply someone who wants to have fun, a gay quiz can offer insights and spark important conversations."
     },
     {
-        title: "Is it normal to be uncertain about my feelings before taking the test?",
-        answer: "Absolutely. Many people aren’t sure where they stand until they’ve given it some thought."
+        title: "Things to Keep in Mind",
+        answer: <ol type="1" className={"flex flex-col gap-1 list-inside list-decimal"}>
+                <li><span className={"font-bold"}>No Quiz Defines You</span>: Remember, a quiz is just a tool. Though it helps understand you better. Still, it's you who has to identify yourself.</li>
+                <li><span className={"font-bold"}>Stay Honest</span>: The more truthful your answers, the more meaningful the results.</li>
+                <li><span className={"font-bold"}>Have Fun</span>: Quizzes are meant to be enjoyable, so take them with a light heart.</li>
+        </ol>
     },
     {
-        title: "How should I interpret my test results?",
-        answer: "Use the outcome as a conversation starter with yourself or others—think of it as a guide, not a label."
-    },
-    {
-        title: "How long does it take to complete the Gay Test?",
-        answer: "Most users finish in about five minutes."
-    },
-    {
-        title: "Are my responses and results kept private?",
-        answer: "Yes. We do not store any personal data or link your answers back to you."
-    },
-    {
-        title: "Can minors take this test, and is parental consent required?",
-        answer: "Anyone can try it, but if you’re under 18 check with a guardian or counselor for support."
-    },
-    {
-        title: "What if my results don’t match how I feel?",
-        answer: "Trust your own sense of self—results are only one perspective and may not capture everything."
-    },
-    {
-        title: "Where can I find support or resources after taking the test?",
-        answer: "Look for local LGBTQ+ centers, online forums, or helplines to connect with understanding communities."
+        title: "Ready for Your Gay Quiz?",
+        answer: <div>
+            So, why waste time? Even if you are not confused, take the test! Just know yourself better. Even straight or bisexual folks take this test to know better about themselves. If you’re ready to explore, take a gay quiz and see where it leads you. Use it as a starting point to understand yourself better or just as a fun activity with friends. No matter what, remember that your identity is valid, and it’s okay to take your time discovering who you are.<br/><br/>Start your journey of self-discovery today with an engaging and supportive gay quiz!
+        </div>
     }
 ];
 
@@ -84,9 +70,9 @@ export default function Faq() {
                         <div
                             className="overflow-hidden transition-all duration-1000 ease-in-out"
                             style={{ height: isActive ? "auto" : "0px" }}>
-                            <p className={"text-[#979797] text-[16px] md:text-[22px] font-light leading-[26px] md:leading-8"}>
+                            <div className={"text-[#979797] text-[16px] md:text-[22px] font-light leading-[26px] md:leading-8"}>
                                 {faq.answer}
-                            </p>
+                            </div>
                         </div>
                     </li>
                 })}
