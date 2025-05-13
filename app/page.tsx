@@ -40,14 +40,14 @@ export default function Home() {
             <meta name="description" content={`Take our fun and insightful "I am gay" quiz to discover more about yourself. a quiz for gay individuals. My gay quiz offers an engaging way to explore your identity.`} />
             <HeroSection />
             <Faq />
-            <footer>
-                <div className={"flex justify-center flex-wrap text-sm gap-x-8 gap-y-5 md:gap-x-10 max-w-[860px] m-auto pt-[35px] pb-10 md:pb-[62px] px-4 md:px-0"}>
-                    <Link href={"/terms-and-conditions"}>Terms & conditions</Link>
-                    <Link href={"/privacy-policy"}>Privacy policy</Link>
-                    <Link href={"/contact-us"}>Contact us</Link>
-                    <button>©{currentYear} All right reserved</button>
-                </div>
-            </footer>
+            {/*<footer>*/}
+            {/*    <div className={"flex justify-center flex-wrap text-sm gap-x-8 gap-y-5 md:gap-x-10 max-w-[860px] m-auto pt-[35px] pb-10 md:pb-[62px] px-4 md:px-0"}>*/}
+            {/*        <Link href={"/terms-and-conditions"}>Terms & conditions</Link>*/}
+            {/*        <Link href={"/privacy-policy"}>Privacy policy</Link>*/}
+            {/*        <Link href={"/contact-us"}>Contact us</Link>*/}
+            {/*        <button>©{currentYear} All right reserved</button>*/}
+            {/*    </div>*/}
+            {/*</footer>*/}
         </div>
     );
 }
