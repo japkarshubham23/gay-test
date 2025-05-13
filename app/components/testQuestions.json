@@ -1,111 +1,111 @@
 [
   {
     "index": 1,
-    "question": "Who do you typically notice first in a room? 👀",
+    "question": "At a social event, what kind of people do you find yourself drawn to for conversation? 🤝",
     "options": [
-      { "answer": "Same gender 🌈", "impact": 10 },
-      { "answer": "Opposite gender", "impact": 0 },
-      { "answer": "Both equally", "impact": 8 },
-      { "answer": "Nobody really", "impact": -5 }
+      { "answer": "People who are outgoing and lively 🎉", "impact": 8 },
+      { "answer": "People who are thoughtful and introspective 🤔", "impact": 5 },
+      { "answer": "People who share my interests 🎯", "impact": 0 },
+      { "answer": "People who are different from me and can offer a new perspective 🌍", "impact": 10 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 2,
-    "question": "Your celebrity crush is... 🌟",
+    "question": "If you could attend any event, what would you pick? 🎫",
     "options": [
-      { "answer": "Same gender 🎬", "impact": 12 },
-      { "answer": "Opposite gender", "impact": 0 },
-      { "answer": "Multiple genders", "impact": 9 },
-      { "answer": "No one famous", "impact": -3 }
+      { "answer": "A colorful parade with music and dancing 🎶", "impact": 10 },
+      { "answer": "A competitive sports match 🏀", "impact": -5 },
+      { "answer": "A food and wine tasting 🍷", "impact": 0 },
+      { "answer": "A tech convention 💻", "impact": 0 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 3,
-    "question": "Imagine your wedding partner: 💍",
+    "question": "What’s your take on couples showing affection in public? 💑",
     "options": [
-      { "answer": "Same gender ❤️", "impact": 15 },
-      { "answer": "Opposite gender", "impact": 0 },
-      { "answer": "Not sure yet", "impact": 7 },
-      { "answer": "No marriage", "impact": -4 }
+      { "answer": "It’s cute no matter who they are 🌈", "impact": 8 },
+      { "answer": "It bugs me, especially if they’re two guys 😬", "impact": -10 },
+      { "answer": "I’m fine with it but wouldn’t do it 🤷", "impact": 0 },
+      { "answer": "I’m all for it and would join in ❤️", "impact": 5 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 4,
-    "question": "Your social media follows... 📱",
+    "question": "In a romantic movie, who do you connect with more? 🎬",
     "options": [
-      { "answer": "LGBTQ+ creators 🏳️🌈", "impact": 10 },
-      { "answer": "Mainstream content", "impact": 0 },
-      { "answer": "Mix of both", "impact": 6 },
-      { "answer": "Just memes", "impact": -2 }
+      { "answer": "The guy chasing someone 👨", "impact": 0 },
+      { "answer": "The girl being chased 👩", "impact": 10 },
+      { "answer": "Both of them equally 👫", "impact": 8 },
+      { "answer": "Neither, I just watch the plot 📖", "impact": -5 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 5,
-    "question": "How would you feel about a same-gender date? 😊",
+    "question": "Where’s your dream vacation spot? ✈️",
     "options": [
-      { "answer": "Excited! 🌈", "impact": 14 },
-      { "answer": "Curious", "impact": 7 },
-      { "answer": "Neutral", "impact": 3 },
-      { "answer": "Uncomfortable 😬", "impact": -8 }
+      { "answer": "A sunny beach resort 🏖️", "impact": 0 },
+      { "answer": "A vibrant city with nightlife 🌃", "impact": 5 },
+      { "answer": "A cozy cabin in the woods 🌲", "impact": -3 },
+      { "answer": "An action-packed adventure trip 🏞️", "impact": 0 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 6,
-    "question": "Your best friend comes out 🌈",
+    "question": "How do you usually hang out with friends? 👥",
     "options": [
-      { "answer": "Me too!", "impact": 12 },
-      { "answer": "Happy for them", "impact": 3 },
-      { "answer": "Confused", "impact": -2 },
-      { "answer": "Don't care 🤷♂️", "impact": -5 }
+      { "answer": "Playing sports or games ⚽", "impact": -5 },
+      { "answer": "Chatting about love and feelings 💬", "impact": 5 },
+      { "answer": "Doing artsy stuff like painting 🎨", "impact": 3 },
+      { "answer": "I don’t hang out much 😐", "impact": -5 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 7,
-    "question": "Do you identify with LGBTQ+ labels? 🏳️🌈",
+    "question": "Seeing two guys holding hands in public—what’s your reaction? 👬",
     "options": [
-      { "answer": "Yes, definitely", "impact": 15 },
-      { "answer": "Maybe", "impact": 6 },
-      { "answer": "Still figuring out", "impact": 4 },
-      { "answer": "No ❌", "impact": -10 }
+      { "answer": "I smile, it’s nice 😊", "impact": 10 },
+      { "answer": "I feel weird and look away 😕", "impact": -10 },
+      { "answer": "I don’t really notice 🤷", "impact": 0 },
+      { "answer": "I’d want to high-five them 🤗", "impact": 15 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 8,
-    "question": "How often same-gender crushes? 💘",
+    "question": "Who are your closest buddies? 👫",
     "options": [
-      { "answer": "Often 😍", "impact": 12 },
-      { "answer": "Sometimes", "impact": 7 },
-      { "answer": "Once/twice", "impact": 3 },
-      { "answer": "Never 🚫", "impact": -8 }
+      { "answer": "Mostly dudes 👨‍👨‍👦", "impact": 5 },
+      { "answer": "Mostly ladies 👩‍👩‍👧", "impact": -5 },
+      { "answer": "A good mix of both 👫", "impact": 0 },
+      { "answer": "I roll solo 🚫", "impact": -5 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 9,
-    "question": "Future partner's gender? 🔮",
+    "question": "What’s your vibe on diversity in TV shows and movies? 📺",
     "options": [
-      { "answer": "Same 🌟", "impact": 14 },
-      { "answer": "Opposite", "impact": 0 },
-      { "answer": "Either", "impact": 9 },
-      { "answer": "Not interested", "impact": -6 }
+      { "answer": "I’m here for it 🌈", "impact": 8 },
+      { "answer": "It’s overdone ❌", "impact": -10 },
+      { "answer": "I don’t care either way 🤷", "impact": 0 },
+      { "answer": "I hunt for those stories 🔍", "impact": 15 }
     ],
     "selectedIndex": -1
   },
   {
     "index": 10,
-    "question": "LGBTQ+ dating apps? 📱",
+    "question": "How do you feel about trying out new social venues or activities with friends? 🌟",
     "options": [
-      { "answer": "Already on one", "impact": 15 },
-      { "answer": "Would try", "impact": 7 },
-      { "answer": "Maybe", "impact": 3 },
-      { "answer": "Never ❌", "impact": -10 }
+      { "answer": "I love exploring new places and experiences 🚀", "impact": 12 },
+      { "answer": "I’m open to it if my friends are enthusiastic 🤝", "impact": 5 },
+      { "answer": "I prefer sticking to familiar places 🏠", "impact": -5 },
+      { "answer": "I’m not really into trying new things socially 😐", "impact": -10 }
     ],
     "selectedIndex": -1
   }
