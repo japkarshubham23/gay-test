@@ -227,7 +227,7 @@ export default function QuizResult() {
 
     const allAnswered = quiz.filter(e => e.selectedIndex !== -1).length === 10;
 
-    return <div className={"flex flex-col min-h-[calc(100dvh_-_6px)] px-4 md:px-0"}>
+    return <div className={"flex flex-col min-h-[calc(100dvh_-_6px)] px-4 lg:px-0"}>
         <header className={"flex justify-center pt-[24px] md:pt-[50px] pb-[56px]"}>
             <button className={"cursor-pointer"} onClick={() => {
                 router.push('/')
