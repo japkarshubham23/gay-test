@@ -10,13 +10,16 @@ import logo from "@/app/images/logo.png";
 import { useRouter } from "next/navigation";
 
 function ProgressBar() {
-    const {quiz} = useTestReport();
+    const {quiz, activeQuizIndex} = useTestReport();
 
     const [widthElement, setWidthElement] = useState(0);
     const ref = useRef<HTMLDivElement>(null);
 
     const products = (quiz.filter(e=> e.selectedIndex !== -1).length + 1);
     const progressInPx: number = ((widthElement / 10) * (products))
+
+    const nextInactiveQuiz: ITestReport | undefined = quiz.find((e:ITestReport) => e.selectedIndex === -1);
+    const previewMode = !!(nextInactiveQuiz?.index && nextInactiveQuiz.index > activeQuizIndex);
 
     useEffect(() => {
         if (ref.current) {
@@ -46,7 +49,7 @@ function ProgressBar() {
             {Array.from({ length: 11 }).map((_, i) => (
                 <div key={i} className={"transition-all duration-700 ease-in-out"}>
                     {i != 0 && ((products > i) ? <div className={"w-[20px] md:w-[30px]"}>
-                            <CompleteIcon />
+                            <CompleteIcon previewMode={(previewMode) && i === activeQuizIndex} />
                         </div> : <span
                             className={`font-medium transition-all duration-700 ease-in-out 
                         ${products !== i ? 'opacity-20 text-sm md:text-base' : 'opacity-100 text-base md:text-xl'}`}>
@@ -126,6 +129,7 @@ function TestReport() {
 function TestQuiz() {
     const {quiz, answer, activeQuizIndex, setActiveQuizIndex} = useTestReport();
     const activeQuiz = quiz.find((e: ITestReport) => e.index === activeQuizIndex)
+    const nextBtnActive = (activeQuiz?.selectedIndex !== -1);
     const [buttonAction, setButtonAction] = useState({
         hover: -1,
         selected: -1
@@ -170,14 +174,20 @@ function TestQuiz() {
         <ProgressBar />
 
         <div className={"py-[110px]"}>
-            <div className={"flex pb-[46px]"}>
+            <div className={"flex gap-1.5 pb-[46px]"}>
                 <div onClick={() => {
                     setActiveQuizIndex(activeQuizIndex - 1)
                 }} className={`w-4.5 transition-all duration-500 ease-in-out pt-0.5 md:pt-1 ${(activeQuiz?.index !== 1) ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}`}>
                     <ArrowIcon/>
                 </div>
-                <h2
-                    className={"text-center text-lg md:text-[26px] font-medium leading-7 md:leading-10 flex-1"}>{activeQuiz?.question}</h2>
+
+                <h2 className={"text-center text-lg md:text-[26px] font-medium leading-7 md:leading-10 flex-1"}>{activeQuiz?.question}</h2>
+
+                <div onClick={() => {
+                    setActiveQuizIndex(activeQuizIndex + 1)
+                }} className={`flex items-end w-4.5 rotate-180 transition-all duration-500 ease-in-out pb-0.5 md:pb-1 ${(nextBtnActive) ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}`}>
+                    <ArrowIcon/>
+                </div>
             </div>
 
             <ul className={"grid grid-cols-2 gap-[10px] md:gap-[50px]"}>
