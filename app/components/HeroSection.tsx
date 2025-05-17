@@ -52,7 +52,7 @@ export default function HeroSection() {
                 <Image src={logo.src} alt={"logo"} height={100} width={100} />
             </header>
 
-            <div className={"flex flex-col justify-between pb-2.5 px-[16px] md:px-0 max-w-[500px] m-auto h-[calc(100dvh_-_120px)] md:h-[calc(100vh_-_145px)]"}>
+            <div className={"flex flex-col justify-between pb-2.5 px-[16px] md:px-0 max-w-[500px] m-auto h-[calc(100svh_-_120px)] md:h-[calc(100vh_-_145px)]"}>
                 <div className={"flex justify-center gap-6"}>
                     <div
                         className={"flex gap-1 md:gap-3 px-2.5 md:px-3 py-2 md:py-2.5 bg-[#11100C] border-[1px] rounded-md border-r-2 border-[#3A3935]"}>
