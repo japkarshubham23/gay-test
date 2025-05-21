@@ -19,26 +19,26 @@ export const metadata: Metadata = {
     authors: [{ name: "Shubham Japkar", url: "https://linkedin.com/in/shubham-japkar" }],
     creator: "Shubham Japkar",
     publisher: "Shubham Japkar",
-    metadataBase: new URL("https://yourdomain.com"),
+    metadataBase: new URL("https://mygaytest.com"),
     alternates: {
-        canonical: "https://yourdomain.com/quiz",
+        canonical: "https://mygaytest.com/quiz",
     },
-    openGraph: {
-        title: "Gay test Online | Am I gay test",
-        description: `Whether you're looking for a gay test online or wondering, "Am I gay?", take our My Gay Online Test and learn more about yourself.`,
-        // url: "https://yourdomain.com/quiz",
-        siteName: "Gay Test by yourdomain.com",
-        images: [
-            {
-                url: "https://yourdomain.com/og-image.jpg",
-                width: 1200,
-                height: 630,
-                alt: "Gay Test – Accurate, Free, and Fun Quiz",
-            },
-        ],
-        type: "website",
-        locale: "en_US",
-    },
+    // openGraph: {
+    //     title: "Gay test Online | Am I gay test",
+    //     description: `Whether you're looking for a gay test online or wondering, "Am I gay?", take our My Gay Online Test and learn more about yourself.`,
+    //     // url: "https://mygaytest.com/quiz",
+    //     siteName: "Gay Test by mygaytest.com",
+    //     images: [
+    //         {
+    //             url: "https://mygaytest.com/og-image.jpg",
+    //             width: 1200,
+    //             height: 630,
+    //             alt: "Gay Test – Accurate, Free, and Fun Quiz",
+    //         },
+    //     ],
+    //     type: "website",
+    //     locale: "en_US",
+    // },
     robots: {
         index: true,
         follow: true,

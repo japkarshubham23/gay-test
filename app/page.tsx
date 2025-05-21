@@ -16,17 +16,17 @@ export const metadata: Metadata = {
     alternates: {
         canonical: SITE_NAME,
     },
-    openGraph: {
-        title: "I am Gay Quiz | Quiz for gay | My gay Quiz",
-        description: `Take our fun and insightful "I am gay" quiz to discover more about yourself. a quiz for gay individuals. My gay quiz offers an engaging way to explore your identity.`,
-        url: SITE_NAME,
-        siteName: `Gay Test by ${SITE_DOMAIN_NAME}`,
-        // images: [{
-        //     url: "https://yourdomain.com/og-image.jpg",
-        //     width: 1200, height: 630, alt: "Gay Test – Accurate, Free, and Fun Quiz",
-        // },],
-        type: "website",
-    },
+    // openGraph: {
+    //     title: "I am Gay Quiz | Quiz for gay | My gay Quiz",
+    //     description: `Take our fun and insightful "I am gay" quiz to discover more about yourself. a quiz for gay individuals. My gay quiz offers an engaging way to explore your identity.`,
+    //     url: SITE_NAME,
+    //     siteName: `Gay Test by ${SITE_DOMAIN_NAME}`,
+    //     // images: [{
+    //     //     url: "https://mygaytest.com/og-image.jpg",
+    //     //     width: 1200, height: 630, alt: "Gay Test – Accurate, Free, and Fun Quiz",
+    //     // },],
+    //     type: "website",
+    // },
     robots: {
         index: true, follow: true, nocache: false, googleBot: {
             index: true, follow: true, noimageindex: false,
