@@ -16,7 +16,6 @@ export default function LgbtqTest() {
         </header>
 
         <div className="text-white max-w-3xl mx-auto px-4 py-10 space-y-8">
-            <meta name="description" content={`Discover how LGBTQ tests help explore sexual orientation and gender identity. Learn about their purpose, types, and role in self-discovery.`} />
             <h1 className="text-3xl font-bold text-purple-400">What is an LGBTQ Test?</h1>
             <p className="text-gray-200">
                 An LGBTQ test is an online or self-reflective quiz designed to help individuals explore their sexual

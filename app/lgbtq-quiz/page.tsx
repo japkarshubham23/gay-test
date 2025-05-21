@@ -55,6 +55,7 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <div>
+            <meta name="description" content={`Discover how LGBTQ tests help explore sexual orientation and gender identity. Learn about their purpose, types, and role in self-discovery.`} />
             <LgbtqTest/>
         </div>
     );
